@@ -1,45 +1,46 @@
+# 🌐 Formulário Web com CEP Automático e Arquivo JSON
 
----
+Este projeto é uma página HTML interativa que permite:
 
-### 📁 2. `README.md` para o **Formulário HTML com CEP e JSON**
+- Preenchimento automático de endereço via CEP (usando a [BrasilAPI](https://brasilapi.com.br));
+- Upload de um arquivo `.json` com dados pessoais;
+- Salvamento dos dados preenchidos em um novo arquivo `.json`.
 
-```markdown
-# 🧾 Formulário com CEP e Arquivo JSON
 
-Este é um formulário HTML interativo com funcionalidades de:
+## ⚙️ Funcionalidades
 
-- 🔎 Busca automática de endereço ao digitar o **CEP**.
-- 💾 Salvamento dos dados em um arquivo `.json`.
-- 📂 Carregamento de dados via upload de arquivo `.json`.
+- 🧠 **Busca de endereço por CEP**: Ao sair do campo de CEP, os dados são preenchidos automaticamente via [BrasilAPI](https://brasilapi.com.br).
+- 📂 **Importar JSON**: Ao selecionar um arquivo `.json`, os dados são carregados no formulário.
+- 💾 **Exportar JSON**: Ao clicar em "Salvar", um arquivo `dados.json` é gerado com os dados do formulário.
 
-## ✅ Funcionalidades
+## ▶️ Como Usar
 
-- Preenchimento automático de **rua**, **bairro**, **cidade** e **estado** com base no CEP informado.
-- Upload de arquivo `.json` para preencher os campos automaticamente.
-- Download de um arquivo `.json` com os dados preenchidos no formulário.
+1. Abra o arquivo `webapi.html` no navegador.
+2. Digite um nome e um CEP válido (ex: `58056600`).
+3. O restante do endereço será preenchido automaticamente.
+4. Clique em **"Salvar"** para baixar os dados como `dados.json`.
+5. Você também pode importar um `dados.json` clicando em **"Escolher arquivo"**.
 
-## 💻 Tecnologias
+## 🛠️ Tecnologias Usadas
 
-- HTML5
-- JavaScript
-- [BrasilAPI](https://brasilapi.com.br) (para consulta de CEP)
+- HTML5  
+- JavaScript  
+- [BrasilAPI - CEP](https://brasilapi.com.br)
 
-## 📦 Como usar
 
-1. **Digite seu nome.**
-2. **Digite um CEP válido** e saia do campo para preenchimento automático.
-3. **Complete ou revise os dados.**
-4. **Clique em "Salvar"** para baixar um arquivo `dados.json`.
-5. **Use o campo de upload** para carregar um arquivo `.json` com dados já salvos.
+## 📁 Arquivos do Projeto
 
-### Exemplo de JSON gerado:
+- `webapi.html`: Interface HTML e JavaScript para preenchimento de formulário, integração com API e manipulação de arquivos JSON.
+- `dados.json`: Exemplo de arquivo JSON compatível com o formulário.
+
+### 📦 Exemplo de `dados.json`
 
 ```json
 {
-  "nome": "João da Silva",
-  "cep": "01001-000",
-  "rua": "Praça da Sé",
-  "bairro": "Sé",
-  "cidade": "São Paulo",
-  "estado": "SP"
+  "nome": "Pedro",
+  "cep": "58056600",
+  "rua": "Rua Pedro Segundo",
+  "bairro": "Logradouro",
+  "cidade": "Joao Pessoa",
+  "estado": "PB"
 }
